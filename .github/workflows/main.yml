@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main']
+    tags: ['v*']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: |
+          python3 -m pip install ruff
+          ruff check --output-format=github .
+
+      - run: |
+          python3 -m pip install build
+          python3 -m build --wheel
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/
