@@ -2,7 +2,7 @@ import re
 from setuptools import Distribution
 from .. import build_version
 
-_P = re.compile(r'([-.]?[a-z]+)', re.I)
+_P = re.compile(r"([-.]?[a-z]+)", re.I)
 
 
 def configure(dist: Distribution):
