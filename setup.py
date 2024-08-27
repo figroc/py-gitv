@@ -6,7 +6,9 @@ def readme():
     from pathlib import Path
 
     return dict(
+        license="MIT",
         author="figroc",
+        url="https://github.com/figroc/py-gitv",
         description="A biased Git versioning tool for Python project.",
         long_description=(Path(__file__).parent / "README.md").read_text(),
         long_description_content_type="text/markdown",
