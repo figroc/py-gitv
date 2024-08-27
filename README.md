@@ -14,7 +14,7 @@ A biased git versioning tool. It versions as following:
 
   i.e. `0.1.0-dev{BUILD_NUMBER}+{GIT_COMMIT_SHORT_SHA}`
 
-If env `VERSIONING_GIT_BRANCH` is set, it will be used instead of `git branch --current`.
+If env `VERSIONING_GIT_BRANCH` is set, it will be used instead of `git branch --show-current`.
 
 ## Usage
 
