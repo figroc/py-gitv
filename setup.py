@@ -17,7 +17,7 @@ def readme():
 
 setup(
     name="gitv",
-    version=build_version("2.2.1", sticky=True),
+    version=build_version("2.2.2", sticky=True),
     packages=find_packages(),
     entry_points={
         "setuptools.finalize_distribution_options": [
