@@ -1,6 +1,6 @@
 # Git Versioning for Python Project
 
-A biased git versioning tool. It versions as following:
+An opinionated git versioning tool. It versions as following:
 
 - On `v*` tag: version as tag if not `sticky`
 
